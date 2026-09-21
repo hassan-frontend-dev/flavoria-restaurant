@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">مطعم الأكيل</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo" id="logo-text">🍔 مطعم الأكيل</div>
+        <nav>
+            <ul>
+                <li><a href="#home" id="nav-home">الرئيسية</a></li>
+                <li><a href="#menu" id="nav-menu">المنيو</a></li>
+                <li><a href="#cart"><span id="nav-cart">السلة</span> (<span id="cart-count">0</span>)</a></li>
+                <li><button id="lang-btn" onclick="toggleLanguage()" class="lang-btn">English</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1 id="hero-title">أطعم المأكولات بين يديك</h1>
+        <p id="hero-desc">جرب طعم الطازج والمميز اليوم!</p>
+        <a href="#menu" class="btn" id="hero-btn">عرض القائمة</a>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-container">
+        <h2 id="menu-title">قائمة الطعام</h2>
+        <div class="menu-grid" id="menu-grid">
+            <!-- سيتم إضافة المنتجات هنا ديناميكيًا بواسطة JS -->
+        </div>
+    </section>
+
+    <!-- Cart Summary -->
+    <section id="cart" class="cart-section">
+        <h2 id="cart-title">سلة الشراء</h2>
+        <div id="cart-items">
+            <p id="empty-cart-text">السلة فارغة حالياً.</p>
+        </div>
+        <h3><span id="total-text">الإجمالي</span>: <span id="total-price">0</span> <span id="currency">ج.م</span></h3>
+    </section>
+    
+    <button class="checkout-btn" id="checkout-btn-text" onclick="openCheckoutModal()">إتمام الشراء</button>
+    <script src="index.js"></script>
+</body>
+</html>

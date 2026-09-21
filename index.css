@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* تأثير انتقالي ناعم لكل العناصر عند تغيير اللغة أو التفاعل */
+body, header, .card, .cart-section, .btn, .add-btn, .checkout-btn, nav a {
+    transition: all 0.3s ease-in-out;
+}
+
+/* الخلفية العامة للموقع */
+body {
+    background-color: #0d0d0d; /* خلفية داكنة جداً وأنيقة */
+    color: #e0e0e0;
+}
+
+/* الهيدر / شريط التنقل العلوي */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background-color: #161616;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #262626;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12; /* لمسة ذهبية دافئة للشعار */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* زر تغيير اللغة المطور بانتقال ناعم */
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid #f39c12;
+    color: #f39c12;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.lang-btn:hover {
+    background-color: #f39c12;
+    color: #000;
+    transform: scale(1.05); /* تكبير خفيف ولطيف عند مرور الماوس */
+}
+
+/* Hero Section */
+.hero {
+    height: 55vh;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+    color: #ffffff; 
+}
+
+.hero p { 
+    font-size: 1.2rem; 
+    margin-bottom: 20px; 
+    color: #b0b0b0; 
+}
+
+.btn {
+    padding: 12px 28px;
+    background-color: #d35400;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover { 
+    background-color: #e67e22; 
+    transform: translateY(-2px);
+}
+
+/* Menu Section */
+.menu-container {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.menu-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* بطاقات الوجبات */
+.card {
+    background-color: #181818;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    border-color: #f39c12;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 { 
+    margin: 15px 0 5px; 
+    color: #ffffff;
+}
+
+.card .price { 
+    font-weight: bold; 
+    color: #f39c12; 
+    margin-bottom: 15px; 
+}
+
+/* أزرار الإضافة إلى السلة */
+.add-btn {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn:hover { 
+    background-color: #2e7d32; 
+    transform: translateY(-1px);
+}
+
+/* Cart Section */
+.cart-section {
+    padding: 30px 5%;
+    background-color: #181818;
+    margin: 40px 5%;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+}
+
+.cart-section h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #2a2a2a;
+    color: #cccccc;
+}
+
+/* زر إتمام الشراء */
+.checkout-btn {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 25px auto 0 auto; 
+}
+
+.checkout-btn:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+}
+body {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
